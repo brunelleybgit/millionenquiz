@@ -3,6 +3,8 @@
 Ein Quiz-Spiel im Browser. Wir haben es im Team an der Hochschule Bremerhaven gemacht.
 Es ist nur mit HTML und CSS gebaut.
 
+Hier kannst du das Spiel direkt spielen: https://brunelleybgit.github.io/millionenquiz/
+
 ## Die Geschichte
 
 Die Hochschule Bremerhaven hat kein Geld mehr. Die Mensa und die Lernräume sollen schließen
@@ -36,7 +38,9 @@ Jetzt fängt das Spiel erst richtig an und du kannst es noch einmal versuchen.
 
 ## Spielen
 
-Die Datei `index.html` im Browser öffnen. Sie geht direkt zur Startseite `Fragen/Seite.html`.
+Online: https://brunelleybgit.github.io/millionenquiz/
+
+Oder die Datei `index.html` im Browser öffnen. Sie geht direkt zur Startseite `Fragen/Seite.html`.
 
 Die Musik und das Video sind nicht im Repo, weil wir die Rechte daran nicht haben.
 Das Spiel geht aber auch ohne.
