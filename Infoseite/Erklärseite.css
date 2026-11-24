@@ -1,0 +1,128 @@
+/* Body zentrieren und Hintergrundfarbe */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Weißer Container in der Mitte mit ROTEM ALARM-GLOW */
+.main-container {
+  background-color:black;
+  width: 90%;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+
+  /* Alarm-Rahmen */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  animation: alarmGlow 1.8s infinite ease-in-out;
+}
+
+/* Überschrift */
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ff0000;
+}
+
+/* Text und Listen */
+p, li {
+  font-size: 17px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+ul {
+  text-align: left;
+  margin-left: 20px;
+}
+
+strong {
+  color: red; /* rot für wichtige Begriffe */
+}
+
+/* Zurück-zum-Start Kasten linksbündig */
+a.start-button {
+  display: inline-block;        /* Block für rechteckigen Kasten */
+  width: 180px;                 /* Breite des Kastens */
+  margin-top: 25px;             /* Abstand nach oben */
+  text-decoration: none;
+  color: #222222;               /* Textfarbe weiß */
+  background-color: #c2c2c2;    /* Blau, passend zum Spiel */
+  padding: 12px 0;              /* Höhe des Kastens */
+  border-radius: 12px;          /* leicht abgerundet */
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;           /* Text zentriert */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Schatten */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  float: left;                  /* linksbündig */
+}
+
+a.start-button:hover {
+  background-color: #ababab;    /* dunkleres Blau beim Hover */
+  transform: translateY(-2px);
+}
+
+/* Alarm-Animation: stark → schwach → stark */
+@keyframes alarmGlow {
+  0% {
+    box-shadow:
+      0 0 10px rgba(255, 0, 0, 0.4),
+      0 0 20px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 25px rgba(255, 0, 0, 0.9),
+      0 0 50px rgba(255, 0, 0, 0.9);
+  }
+  100% {
+    box-shadow:
+      0 0 10px rgba(255, 0, 0, 0.4),
+      0 0 20px rgba(255, 0, 0, 0.4);
+  }
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .main-container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p, li {
+    font-size: 16px;
+  }
+  a.start-button {
+   
+    font-size: 16px;
+  }
+}
+
+.container.gewonnen {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  animation: none;
+}
+
+.container.gewonnen h1 {
+  color: #00ff00;
+}
+
+.container.gewonnen strong {
+  color: #00cc00;
+}
+
+.container.gewonnen {
+  padding: 50px;
+}

@@ -1,0 +1,5 @@
+# Musik und Video nicht hochladen
+Fragen/music/
+Fragen/video/
+*.mp3
+*.mp4

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millionenquiz aus HS Bremerhaven</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<h1>Millionenquiz aus HS Bremerhaven</h1>
+
+<div class="page">
+
+    <input type="checkbox" id="jokerPhone" class="joker-checkbox">
+
+    <div class="dashboard-container">
+        <div class="dashboard-help">
+            <label for="jokerPhone" class="joker-label" id="phoneJokerLabel">
+                <img src="./Telefon.webp" alt="Telefonjoker">
+            </label>
+        </div>
+
+        <table>
+            <tbody>
+            <tr>
+                <td>15</td>
+                <td>●</td>
+                <td>€ 1 MILLION</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>●</td>
+                <td>€ 500.000</td>
+            </tr>
+            <tr class="active">
+                <td>13</td>
+                <td>●</td>
+                <td>€ 125.000</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>●</td>
+                <td>€ 64.000</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>●</td>
+                <td>€ 32.000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>●</td>
+                <td>€ 16.000</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>●</td>
+                <td>€ 8.000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>●</td>
+                <td>€ 4.000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>●</td>
+                <td>€ 2.000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>●</td>
+                <td>€ 1.000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>●</td>
+                <td>€ 500</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>●</td>
+                <td>€ 300</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>●</td>
+                <td>€ 200</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>●</td>
+                <td>€ 100</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>●</td>
+                <td>€ 50</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="main-conatiner">
+
+        <div class="phone-video-box">
+            <video id="phoneVideo" controls>
+                <source src="./video/telefonjoker.mp4" type="video/mp4">
+                Dein Browser unterstützt dieses Video nicht.
+            </video>
+
+            <label for="jokerPhone" class="close-button" id="closePhoneVideo">
+                Schließen
+            </label>
+        </div>
+
+        <span class="question">
+      Verwende sed so, dass wir die 3. Spalte mit „Hs-Bremerhaven“ ersetzen
+    </span>
+
+        <div class="answers-container">
+            <a href="../Infoseite/erklaerseite-13.html"
+               class="answer-link">
+                <div class="answer-container">
+                    <span class="answer-container-prefix">A:</span>
+                    <span> sed 's_^[^a-zA-Z]*[^0-9]*[^a-zA-Z]*[^:][^a-zA-Z]*[0-9][a-zA-Z]*[^:][a-zA-Z]*_Hs-Bremerhaven_g' </span>
+                </div>
+            </a>
+            <a href="14.frage.html" class="answer-link">
+                <div class="answer-container">
+                    <span class="answer-container-prefix">B:</span>
+                    <span> sed 's_Gaußschule2_Hs-Bremerhaven_g' </span>
+                    <br>
+                    <br>
+                </div>
+            </a>
+            <a href="../Infoseite/erklaerseite-13.html"
+               class="answer-link">
+                <div class="answer-container">
+                    <span class="answer-container-prefix">C:</span>
+                    <span> sed 's_Gaußschule_Hs-Bremerhaven_g' </span>
+                </div>
+            </a>
+            <a href="../Infoseite/erklaerseite-13.html"
+               class="answer-link">
+                <div class="answer-container">
+                    <span class="answer-container-prefix">D:</span>
+                    <span> sed 's_[a-zA-Z]*[0-9][:][a-zA-Z]*$_Hs-Bremerhaven_g' </span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const phoneCheckbox = document.getElementById('jokerPhone');
+    const phoneVideo = document.getElementById('phoneVideo');
+    const closeButton = document.getElementById('closePhoneVideo');
+
+    phoneCheckbox.addEventListener('change', () => {
+        if (phoneCheckbox.checked) {
+            phoneVideo.currentTime = 0;
+            phoneVideo.play();
+        }
+    });
+
+    closeButton.addEventListener('click', () => {
+        phoneVideo.pause();
+        phoneVideo.currentTime = 0;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+  color:white;
+  background-image:url("Hinter.avif");
+  background-size:cover;
+  background-position:center;
+ font-family:serif; 
+ text-align:center;
+font-size:30px;
+line-height:1.7;
+padding:10px;
+}
+p{
+width:500px;
+height:500px;
+}
+a{
+  color:violet;
+}
+h1{
+  color:rgba(129, 21, 252, 0.8);
+}
